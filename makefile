@@ -11,7 +11,7 @@ SRC_DIR = src
 BIN_DIR = bin
 
 # List of programs (just the names, without .c extension)
-PROGRAMS = parallel atomic_update learning_openmp barier get_num_threads critical mytry
+PROGRAMS = parallel atomic_update learning_openmp barier get_num_threads critical mytry find_maximum
 
 # Targets to build all programs
 all: $(PROGRAMS)
@@ -42,8 +42,15 @@ run_critical: critical
 run_mytry: mytry
 	./$(BIN_DIR)/mytry
 
+run_find_maximum:  find_maximum
+		./$(BIN_DIR)/find_maximum
+
+
 
 
 # Clean rule to delete all executables in bin directory
 clean:
 	rm -f $(BIN_DIR)/*
+
+
+
